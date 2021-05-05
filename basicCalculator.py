@@ -17,6 +17,8 @@ async def calculate(context, *, problem):
         await context.send(f'Problem: {problem}')
         problem = problem.replace('^', '**')     
         await context.send(f'Answer: {eval(problem)}') 
-    
+    else:
+        await context.send(f'Problem: {problem}')    
+        await context.send(f'Answer: {eval(problem)}')             
 
 bot.run(apiKey)
